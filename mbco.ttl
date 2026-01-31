@@ -1,0 +1,555 @@
+@prefix : <https://w3id.org/bot#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/bot#> .
+
+<https://w3id.org/bot#> rdf:type owl:Ontology ;
+                         owl:versionIRI <https://w3id.org/bot-0.3.2> ;
+                         <http://purl.org/dc/terms/contributor> "Ali Kücükavci" ,
+                                                                "All contributing members of the W3C Linked Building Data Community Group" ,
+                                                                "Ana Roxin" ,
+                                                                "Edison Chung" ,
+                                                                "Gonçal Costa" ,
+                                                                "Hervé Pruvost" ,
+                                                                "Jyrki Oraskari" ,
+                                                                "Karl Hammar" ,
+                                                                "Katja Breitenfelder" ,
+                                                                "Lars Wikström" ,
+                                                                "María Poveda-Villalón" ,
+                                                                "Mathias Bonduel" ,
+                                                                "Pouya Zangeneh" ,
+                                                                "Richard Pinka" ,
+                                                                "Rui Ma" ,
+                                                                "Rui de Klerk" ,
+                                                                "Sjoerd Rongen" ,
+                                                                "Ville Kukkonen" ,
+                                                                "Walter Terkaj" ;
+                         <http://purl.org/dc/terms/creator> <http://maxime-lefrancois.info/me#> ,
+                                                            <https://orcid.org/0000-0001-8020-4609> ,
+                                                            <https://orcid.org/0000-0002-2033-859X> ,
+                                                            <https://orcid.org/0000-0002-6519-7057> ,
+                                                            "Georg Ferdinand Schneider" ,
+                                                            "Mads Holten Rasmussen" ,
+                                                            "Maxime Lefrançois" ,
+                                                            "Pieter Pauwels" ;
+                         <http://purl.org/dc/terms/description> """The Building Topology Ontology (BOT) is a simple ontology defining the core concepts of a building.
+It is a simple, easy to extend ontology for the construction industry to document and exchange building data on the web.
+Changes since version 0.2.0 of the ontology are documented in:
+https://w3id.org/bot/bot.html#changes
+The version 0.2.0 of the ontology is documented in:
+Mads Holten Rasmussen, Pieter Pauwels, Maxime Lefrançois, Georg Ferdinand Schneider, Christian Anker Hviid and Jan Karlshøj (2017) Recent changes in the Building Topology Ontology, 5th Linked Data in Architecture and Construction Workshop (LDAC2017), November 13-15, 2017, Dijon, France, https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology
+The initial version 0.1.0 of the ontology was documented in:
+Mads Holten Rasmussen, Pieter Pauwels, Christian Anker Hviid and Jan Karlshøj (2017) Proposing a Central AEC Ontology That Allows for Domain Specific Extensions, Lean and Computing in Construction Congress (LC3): Volume I – Proceedings of the Joint Conference on Computing in Construction (JC3), July 4-7, 2017, Heraklion, Greece, pp. 237-244 https://doi.org/10.24928/JC3-2017/0153"""@en ;
+                         <http://purl.org/dc/terms/issued> "2018-06-21T12:00:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/1.0/> ;
+                         <http://purl.org/dc/terms/modified> "2020-07-31T08:51:00"^^xsd:dateTime ;
+                         <http://purl.org/dc/terms/title> "The Building Topology Ontology (BOT)"@en ;
+                         <http://purl.org/vocab/vann/preferredNamespacePrefix> "bot" ;
+                         <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/bot#> ;
+                         rdfs:seeAlso <http://www.semantic-web-journal.net/system/files/swj2279.pdf> ,
+                                      <https://doi.org/10.24928/JC3-2017/0153> ,
+                                      <https://www.researchgate.net/publication/320631574_Recent_changes_in_the_Building_Topology_Ontology> ;
+                         owl:priorVersion <https://w3id.org/bot-0.3.1> ;
+                         owl:versionInfo "0.3.2" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2003/06/sw-vocab-status/ns#term_status
+<http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2006/vcard/ns#fn
+<http://www.w3.org/2006/vcard/ns#fn> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/domainIncludes
+<https://schema.org/domainIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/name
+<https://schema.org/name> rdf:type owl:AnnotationProperty .
+
+
+###  https://schema.org/rangeIncludes
+<https://schema.org/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://webprotege.stanford.edu/mbco#hasDfXCriterion
+<http://webprotege.stanford.edu/mbco#hasDfXCriterion> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain :Element ,
+                                                                  :Zone ;
+                                                      rdfs:range <http://webprotege.stanford.edu/mbco#DfXCriterion> ;
+                                                      rdfs:comment "Relation assigning a DfX criterion to a building or its part."^^xsd:string ;
+                                                      rdfs:label "has DfX criterion"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#hasDfXIndicator
+<http://webprotege.stanford.edu/mbco#hasDfXIndicator> rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf owl:topObjectProperty ;
+                                                      rdfs:domain <http://webprotege.stanford.edu/mbco#DfXCriterion> ;
+                                                      rdfs:range <http://webprotege.stanford.edu/mbco#DfXIndicator> ;
+                                                      rdfs:comment "Relation assigning an indicator or a metric to a particular DfX criterion."^^xsd:string ;
+                                                      rdfs:label "has DfX indicator"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#hasVolumetricModule
+<http://webprotege.stanford.edu/mbco#hasVolumetricModule> rdf:type owl:ObjectProperty ;
+                                                          rdfs:subPropertyOf :containsZone ;
+                                                          rdfs:domain :Storey ;
+                                                          rdfs:range <http://webprotege.stanford.edu/mbco#VolumetricModule> ;
+                                                          rdfs:comment "Relation to a volumetric module contained in a zone (primarily storey)."^^xsd:string ;
+                                                          rdfs:label "has volumetric module"@en .
+
+
+###  https://w3id.org/bot#adjacentElement
+:adjacentElement rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasElement ;
+                 owl:propertyDisjointWith :intersectingElement ;
+                 rdfs:comment "Relation between a zone and its adjacent building elements, bounding the zone."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/bot#> ;
+                 rdfs:label "adjacent element"@en ;
+                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#adjacentZone
+:adjacentZone rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :Zone ;
+              rdfs:range :Zone ;
+              owl:propertyDisjointWith :intersectsZone ;
+              rdfs:comment "Relationship between two zones that share a common interface, but do not intersect."@en ;
+              rdfs:isDefinedBy <https://w3id.org/bot#> ;
+              rdfs:label "adjacent zone"@en ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+              <https://schema.org/domainIncludes> :Building ,
+                                                  :Site ,
+                                                  :Space ,
+                                                  :Storey ;
+              <https://schema.org/rangeIncludes> :Building ,
+                                                 :Site ,
+                                                 :Space ,
+                                                 :Storey .
+
+
+###  https://w3id.org/bot#aggregates
+:aggregates rdf:type owl:ObjectProperty ;
+            rdfs:comment """This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Forbinder et aggregat (en klynge af elementer, som kan behandles som en samlet enhed) med dets delelementer. For eksempel aggregerer et ventilationsaggregat, blandt andre elementer, en ventilator og et filter.
+        
+Eksempel på brug af bot:aggregates i en produkt-ontologi:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@da ,
+                         """This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Links an aggregate (a cluster of elements that can be treated as a single unit) to its sub-elements. For example an Air Handling Unit aggregates, among other elements, a fan and a filter.
+        
+Example of how to use bot:aggregates in a product ontology:
+```
+product:Fan             rdfs:subClassOf     bot:Element .
+product:Filter          rdfs:subClassOf     bot:Element .
+product:hasFan          rdfs:subPropertyOf  bot:aggregates ;
+                        rdfs:range          product:Fan .
+product:hasFilter       rdfs:subPropertyOf  product:aggregates ;
+                        rdfs:range          product:Filter .
+product:AirHandlingUnit rdfs:subClassOf     bot:Element ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFan ; owl:someValuesFrom  product:Fan ] ;
+                        rdfs:subClassOf     [ owl:onProperty product:hasFilter ; owl:someValuesFrom  product:Filter ] .
+```"""@en ;
+            rdfs:label "aggregates"@en ,
+                       "aggregerer"@da ;
+            rdfs:seeAlso :hasSubElement ;
+            owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/bot#containsElement
+:containsElement rdf:type owl:ObjectProperty ;
+                 rdfs:subPropertyOf :hasElement ;
+                 owl:propertyChainAxiom ( :containsZone
+                                          :containsElement
+                                        ) ;
+                 rdfs:comment "Relation to a building element contained in a zone."@en ;
+                 rdfs:isDefinedBy <https://w3id.org/bot#> ;
+                 rdfs:label "contains element"@en ;
+                 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#containsZone
+:containsZone rdf:type owl:ObjectProperty ,
+                       owl:TransitiveProperty ;
+              rdfs:domain :Zone ;
+              rdfs:range :Zone ;
+              rdfs:comment "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone. bot:containsZone is a transitive property. This implies that in the previous example a bot:containsZone relationship holds between the space zone and the building zone."@en ;
+              rdfs:isDefinedBy <https://w3id.org/bot#> ;
+              rdfs:label "contains zone"@en ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+              <https://schema.org/domainIncludes> :Building ,
+                                                  :Site ,
+                                                  :Space ,
+                                                  :Storey ;
+              <https://schema.org/rangeIncludes> :Building ,
+                                                 :Site ,
+                                                 :Space ,
+                                                 :Storey .
+
+
+###  https://w3id.org/bot#has3DModel
+:has3DModel rdf:type owl:ObjectProperty ;
+            rdfs:comment "Links any bot:Zone or bot:Element to a IRI that identifies its 3D Model. This 3D Model can then be described using some dedicated RDF vocabulary. Else, the 3D Model IRI could be dereferenceable, and when looking up the IRI one could retrieve a representation of the 3D Model with some existing data format for 3D models."@en ;
+            rdfs:isDefinedBy <https://w3id.org/bot#> ;
+            rdfs:label "has 3D model"@en ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" ;
+            <https://schema.org/domainIncludes> :Element ,
+                                                :Zone .
+
+
+###  https://w3id.org/bot#hasBuilding
+:hasBuilding rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :containsZone ;
+             rdfs:domain :Zone ;
+             rdfs:range :Building ;
+             rdfs:comment "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ;
+             rdfs:isDefinedBy <https://w3id.org/bot#> ;
+             rdfs:label "has building"@en ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+             <https://schema.org/domainIncludes> :Site .
+
+
+###  https://w3id.org/bot#hasElement
+:hasElement rdf:type owl:ObjectProperty ;
+            rdfs:domain :Zone ;
+            rdfs:range :Element ;
+            owl:propertyChainAxiom ( :containsZone
+                                     :hasElement
+                                   ) ;
+            rdfs:comment "Links a Zone to an Element that is either contained in, adjacent to or intersecting with the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ;
+            rdfs:isDefinedBy <https://w3id.org/bot#> ;
+            rdfs:label "has element"@en ;
+            <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#hasSpace
+:hasSpace rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :containsZone ;
+          rdfs:domain :Zone ;
+          rdfs:range :Space ;
+          rdfs:comment "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey or bot:Building."@en ;
+          rdfs:isDefinedBy <https://w3id.org/bot#> ;
+          rdfs:label "has space"@en ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+          <https://schema.org/domainIncludes> :Storey .
+
+
+###  https://w3id.org/bot#hasStorey
+:hasStorey rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :containsZone ;
+           rdfs:domain :Zone ;
+           rdfs:range :Storey ;
+           rdfs:comment "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ;
+           rdfs:isDefinedBy <https://w3id.org/bot#> ;
+           rdfs:label "has storey"@en ;
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+           <https://schema.org/domainIncludes> :Building .
+
+
+###  https://w3id.org/bot#hasSubElement
+:hasSubElement rdf:type owl:ObjectProperty ;
+               rdfs:domain :Element ;
+               rdfs:range :Element ;
+               rdfs:comment "Relation between two building elements, either one element hosting another (e.g. a wall hosts a window) or a subcomposition of a building element into smaller parts (e.g. an air handling unit has as a part a fan)."@en ;
+               rdfs:isDefinedBy <https://w3id.org/bot#> ;
+               rdfs:label "has sub-element"@en ;
+               <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#hasZeroPoint
+:hasZeroPoint rdf:type owl:ObjectProperty ;
+              rdfs:domain :Site ;
+              rdfs:comment "Links a bot:Site to an instance that encodes the latitude and longitude of the Zero Point of the building site. This could be an instance of a wgs84:Point. The definition of GIS and geometry is not within the scope of BOT and an appropriate ontology needs to be selected here by the user. The use of this property is potentially ambiguous and it might be removed or revised in future editions of the ontology."@en ;
+              rdfs:isDefinedBy <https://w3id.org/bot#> ;
+              rdfs:label "has zero point"@en ;
+              rdfs:seeAlso <https://github.com/w3c-lbd-cg/bot/issues/41> ;
+              <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" .
+
+
+###  https://w3id.org/bot#hostsElement
+:hostsElement rdf:type owl:ObjectProperty ;
+              rdfs:domain :Element ;
+              rdfs:range :Element ;
+              rdfs:comment "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relatie tussen een gebouwelement a) en een ander element b) dat een ander element in zich heeft a). Voorbeeld: inst:wall bot:hostsElement inst:window"@nl ,
+                           "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation between an element a) and another element b) hosted by element a). Example: inst:wall bot:hostsElement inst:window"@en ,
+                           "This property is DEPRECATED, use bot:hasSubElement instead // ORIGINAL definition: Relation mellem en bygningsdel a) og en anden bygningsdel b) hostet af element a). Eksempel: inst:wall bot:hostsElement inst:window"@da ;
+              rdfs:label "heeft element"@nl ,
+                         "hoster element"@da ,
+                         "hoster element"@nl ,
+                         "hosts element"@en ;
+              rdfs:seeAlso :hasSubElement ;
+              owl:deprecated "true"^^xsd:boolean .
+
+
+###  https://w3id.org/bot#interfaceOf
+:interfaceOf rdf:type owl:ObjectProperty ;
+             rdfs:domain :Interface ;
+             rdfs:comment "Relationship between an interface and another thing (building zone, element or owl:Thing)"@en ;
+             rdfs:isDefinedBy <https://w3id.org/bot#> ;
+             rdfs:label "interface of"@en ;
+             <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#intersectingElement
+:intersectingElement rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :hasElement ;
+                     rdfs:comment "Relation between a Zone and a building Element that intersects it."@en ;
+                     rdfs:isDefinedBy <https://w3id.org/bot#> ;
+                     rdfs:label "intersecting element"@en ;
+                     <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#intersectsZone
+:intersectsZone rdf:type owl:ObjectProperty ,
+                         owl:SymmetricProperty ;
+                rdfs:domain :Zone ;
+                rdfs:range :Zone ;
+                rdfs:comment "Relationship between two zones whose 3D extent intersect. For example, a stairwell intersects different storeys."@en ;
+                rdfs:isDefinedBy <https://w3id.org/bot#> ;
+                rdfs:label "intersects zone"@en ;
+                <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" ;
+                <https://schema.org/domainIncludes> :Building ,
+                                                    :Site ,
+                                                    :Space ,
+                                                    :Storey ;
+                <https://schema.org/rangeIncludes> :Building ,
+                                                   :Site ,
+                                                   :Space ,
+                                                   :Storey .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  https://w3id.org/bot#hasSimple3DModel
+:hasSimple3DModel rdf:type owl:DatatypeProperty ;
+                  rdfs:comment "Links any bot:Zone or bot:Element to a 3D Model encoded as a literal."@en ;
+                  rdfs:isDefinedBy <https://w3id.org/bot#> ;
+                  rdfs:label "has simple 3D model"@en ;
+                  <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "unstable" ;
+                  <https://schema.org/domainIncludes> :Element ,
+                                                      :Zone .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/vocommons/voaf#Vocabulary
+<http://purl.org/vocommons/voaf#Vocabulary> rdf:type owl:Class .
+
+
+###  http://webprotege.stanford.edu/mbco#DfXCriterion
+<http://webprotege.stanford.edu/mbco#DfXCriterion> rdf:type owl:Class ;
+                                                   rdfs:comment "Class to represent design criterion (the X in DfX) like manufacturability, sustainability, etc."^^xsd:string ;
+                                                   rdfs:label "DfX criterion"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#DfXIndicator
+<http://webprotege.stanford.edu/mbco#DfXIndicator> rdf:type owl:Class ;
+                                                   rdfs:comment "Class to materialise the DfX criterion through tangible metrics or constraint checks."^^xsd:string ;
+                                                   rdfs:label "DfX indicator"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#Module
+<http://webprotege.stanford.edu/mbco#Module> rdf:type owl:Class ;
+                                             rdfs:subClassOf owl:Thing ;
+                                             rdfs:label "Module"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#PlanarModule
+<http://webprotege.stanford.edu/mbco#PlanarModule> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <http://webprotege.stanford.edu/mbco#Module> ,
+                                                                   :Element ;
+                                                   rdfs:comment "Class to represent an off-site manufactured part of a building that does not enclose any usable space by itself."^^xsd:string ;
+                                                   rdfs:label "Planar module"@en .
+
+
+###  http://webprotege.stanford.edu/mbco#VolumetricModule
+<http://webprotege.stanford.edu/mbco#VolumetricModule> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://webprotege.stanford.edu/mbco#Module> ,
+                                                                       :Zone ;
+                                                       rdfs:comment "Class to represent an off-site manufactured part of a building that encloses usable space by itself."^^xsd:string ;
+                                                       rdfs:label "Volumetric module"@en .
+
+
+###  http://www.w3.org/2006/vcard/ns#Individual
+<http://www.w3.org/2006/vcard/ns#Individual> rdf:type owl:Class .
+
+
+###  https://schema.org/Person
+<https://schema.org/Person> rdf:type owl:Class .
+
+
+###  https://w3id.org/bot#Building
+:Building rdf:type owl:Class ;
+          rdfs:subClassOf :Zone ;
+          owl:disjointWith :Site ,
+                           :Space ,
+                           :Storey ;
+          rdfs:comment "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO 12006-2:2013]. A bot:Building is a part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent, is contained in a building site, and can contain one or more storeys that are vertically connected."@en ;
+          rdfs:isDefinedBy <https://w3id.org/bot#> ;
+          rdfs:label "Building"@en ;
+          <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Element
+:Element rdf:type owl:Class ;
+         owl:disjointWith :Interface ,
+                          :Zone ;
+         rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position [ISO 12006-2:2015, 3.4.7]"@en ;
+         rdfs:isDefinedBy <https://w3id.org/bot#> ;
+         rdfs:label "Building element"@en ;
+         <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Interface
+:Interface rdf:type owl:Class ;
+           owl:disjointWith :Zone ;
+           rdfs:comment """A generic concept to qualify the relationship of two or more things in the world, where at least one is a building element or zone. Examples:
+    - Qualification of heat transmission between zones through one or more building elements. This includes one-dimensional (surface) heat losses from one zone to another through a single building element, a two dimensional (line) loss from one zone to another through the connection in which the two elements meet or a three dimensional (point) loss from one zone to another through the connection where three elements (typically two walls and a slab) meet. 
+    - Connection of an electric device to the electric system of a building. 
+    - A door between one room and another."""@en ;
+           rdfs:isDefinedBy <https://w3id.org/bot#> ;
+           rdfs:label "Interface"@en ;
+           <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Site
+:Site rdf:type owl:Class ;
+      rdfs:subClassOf :Zone ;
+      owl:disjointWith :Space ,
+                       :Storey ;
+      rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. It is intended to contain or contains one or more buildings."@en ;
+      rdfs:isDefinedBy <https://w3id.org/bot#> ;
+      rdfs:label "Site"@en ;
+      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Space
+:Space rdf:type owl:Class ;
+       rdfs:subClassOf :Zone ;
+       owl:disjointWith :Storey ;
+       rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en ;
+       rdfs:isDefinedBy <https://w3id.org/bot#> ;
+       rdfs:label "Space"@en ;
+       <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Storey
+:Storey rdf:type owl:Class ;
+        rdfs:subClassOf :Zone ;
+        rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. A bot:Storey is contained in one or more buildings, and is intended to contain one or more spaces that are horizontally connected. Storeys of a building are connected by means of vertical connections such as elevators and stairs. A bot:Storey encompasses both zones above and below ground, for example, a building with 21 floors above ground, one ground floor and 3 basements is equal to the sentence: A building has 25 instances of bot:Storey."@en ;
+        rdfs:isDefinedBy <https://w3id.org/bot#> ;
+        rdfs:label "Storey"@en ;
+        <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+###  https://w3id.org/bot#Zone
+:Zone rdf:type owl:Class ;
+      rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and has a 3D spatial extent; Sub-classes of bot:Zone include bot:Site, bot:Building, bot:Storey, or bot:Space.  An instance of bot:Zone can contain other bot:Zone instances, making it possible to group or subdivide zones. An instance of bot:Zone can be adjacent to or intersecting other bot:Zone instances. Finally, a bot:Zone can instantiate three relations to bot:Element, which are either contained in (bot:containsElement), adjacent to it (bot:adjacentElement) or intersecting (bot:intersectingElement)."@en ;
+      rdfs:isDefinedBy <https://w3id.org/bot#> ;
+      rdfs:label "Zone"@en ;
+      <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "stable" .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://maxime-lefrancois.info/me#
+<http://maxime-lefrancois.info/me#> rdf:type owl:NamedIndividual ,
+                                             <http://www.w3.org/2006/vcard/ns#Individual> ,
+                                             <https://schema.org/Person> ;
+                                    <http://www.w3.org/2006/vcard/ns#fn> "Maxime Lefrançois" ;
+                                    <https://schema.org/name> "Maxime Lefrançois" .
+
+
+###  https://orcid.org/0000-0001-8020-4609
+<https://orcid.org/0000-0001-8020-4609> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/2006/vcard/ns#Individual> ,
+                                                 <https://schema.org/Person> ;
+                                        <http://www.w3.org/2006/vcard/ns#fn> "Pieter Pauwels" ;
+                                        <https://schema.org/name> "Pieter Pauwels" .
+
+
+###  https://orcid.org/0000-0002-2033-859X
+<https://orcid.org/0000-0002-2033-859X> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/2006/vcard/ns#Individual> ,
+                                                 <https://schema.org/Person> ;
+                                        <http://www.w3.org/2006/vcard/ns#fn> "Georg Ferdinand Schneider" ;
+                                        <https://schema.org/name> "Georg Ferdinand Schneider" .
+
+
+###  https://orcid.org/0000-0002-6519-7057
+<https://orcid.org/0000-0002-6519-7057> rdf:type owl:NamedIndividual ,
+                                                 <http://www.w3.org/2006/vcard/ns#Individual> ,
+                                                 <https://schema.org/Person> ;
+                                        <http://www.w3.org/2006/vcard/ns#fn> "Mads Holten Rasmussen" ;
+                                        <https://schema.org/name> "Mads Holten Rasmussen" .
+
+
+###  https://w3id.org/bot#
+<https://w3id.org/bot#> rdf:type owl:NamedIndividual ,
+                                 <http://purl.org/vocommons/voaf#Vocabulary> .
+
+
+###  Generated by the OWL API (version 4.5.13) https://github.com/owlcs/owlapi
